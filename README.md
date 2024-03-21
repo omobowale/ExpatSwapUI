@@ -17,6 +17,6 @@
 ### Run the application
 * To run the application, first run the back end server by running the following command in the `back_end` folder: `npm start`
 * In another terminal or instance of terminal, run the front end application by running the following command in the `front_end` folder: `npm start`
-* Visit the application via: `http://localhost:<port>` where <port> is the port number specified in the .env file created above
+* Visit the application via: `http://localhost:<port>` where `<port>` is the port number specified in the .env file created above
 * Viola you have the application up and running.
 
