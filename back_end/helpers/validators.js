@@ -47,8 +47,6 @@ const validateDateRange = (startDate, endDate) => {
         errors["endDate"] = `End date [${endDate}] should not be in the future.`;
     }
 
-    console.log("Here too ============= ")
-
     return errors
 
 }

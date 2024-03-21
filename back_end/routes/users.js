@@ -14,10 +14,6 @@ router.get("/", async (req, res) => {
     // get filters (query parameters)
     let { startDate, endDate, pageSize, pageNumber } = req.query
 
-    console.log("start date", startDate);
-    console.log("endDate", endDate)
-
-
     let fetchQuery = {}
 
     if (startDate || endDate) {
@@ -120,7 +116,6 @@ router.post("/", userCreationValidator, async (req, res) => {
 
     try {
         const savedUser = await newUser.save()
-        console.log("saved user", savedUser);
         res.status(201).json(getSuccessData(201, { id: savedUser._id, email: savedUser.email, phoneNumber: savedUser.phoneNumber, firstName: savedUser.firstName, lastName: savedUser.lastName, dateOfBirth: savedUser.dateOfBirth }))
     } catch (err) {
         res.status(500).json(getErrorData(500, err));

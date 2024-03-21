@@ -10,7 +10,6 @@ export const CREATE_NEW_USER_FAILURE = "CREATE_NEW_USER_FAILURE"
 
 export const createUser = (data) => async (dispatch) => {
     return UsersService.createUser(data).then(response => {
-        console.log("response from create user", response);
         if (response.status == RESOURCE_CREATED) {
             dispatch({
                 type: CREATE_NEW_USER,
@@ -32,7 +31,6 @@ export const createUser = (data) => async (dispatch) => {
         }
     }).catch(err => {
         let error_response = err?.response?.data?.errors ?? GENERIC_ERROR
-        console.log('Hey there')
         dispatch({
             type: CREATE_NEW_USER_FAILURE,
             payload: {

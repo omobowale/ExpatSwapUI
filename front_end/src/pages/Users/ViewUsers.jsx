@@ -47,7 +47,6 @@ function ViewUsers() {
 
   const { usersData } = useSelector((state) => state.getUsers);
 
-  console.log("users", usersData);
 
   const clearRecords = () => {
     setStartDate("");
@@ -69,11 +68,9 @@ function ViewUsers() {
         .toString()}`;
     }
 
-    console.log("filterParams", filterParams);
 
     dispatch(getUsers(filterParams))
       .then((response) => {
-        console.log("response here", response);
         if (response.error) {
           setResponseMessage({
             isError: true,

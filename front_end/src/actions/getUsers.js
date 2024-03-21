@@ -11,7 +11,6 @@ export const FETCH_USERS_FAILURE = "FETCH_USERS_FAILURE"
 
 export const getUsers = (data) => async (dispatch) => {
     return UsersService.getUsers(data).then(response => {
-        console.log("response from fetch users", response);
         if (response.status == RESOURCE_FETCHED) {
             dispatch({
                 type: FETCH_USERS,

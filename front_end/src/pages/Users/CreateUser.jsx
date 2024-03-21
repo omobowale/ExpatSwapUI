@@ -49,7 +49,6 @@ function CreateUser() {
               })
             )
               .then((response) => {
-                console.log("response from creating user", response);
                 if (!response.error) {
                   setResponseMessage({
                     isError: false,
@@ -64,7 +63,6 @@ function CreateUser() {
                 }
               })
               .catch((err) => {
-                console.log(err.error, "here ============== ");
                 setResponseMessage({
                   isError: true,
                   message: err?.error ?? "Something went wrong",
