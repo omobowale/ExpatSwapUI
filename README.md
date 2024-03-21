@@ -20,3 +20,5 @@
 * Visit the application via: `http://localhost:<port>` where `<port>` is the port number specified in the .env file created above
 * Viola you have the application up and running.
 
+### Hosted site
+* Site has been hosted at: `https://roaring-conkies-6d4fbd.netlify.app/`

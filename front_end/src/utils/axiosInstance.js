@@ -6,7 +6,7 @@ const backendURL = process.env.REACT_APP_BACKEND_URL;
 export default function axiosInstance(url, method, data, token) {
 
     axios.interceptors.request.use(config => {
-        config.timeout = 5000; // Wait for 5 seconds before timing out
+        config.timeout = 150000; // Wait for 5 seconds before timing out
         return config;
     });
 
